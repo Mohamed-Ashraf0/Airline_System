@@ -1,0 +1,3 @@
+C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test/build/CMakeFiles/AirlineReservationProject.dir
+C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test/build/CMakeFiles/ZERO_CHECK.dir

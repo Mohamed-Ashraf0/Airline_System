@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Aircraft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Boarding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Booking_agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Flight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Flight_attendants.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Maintenance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Passenger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Payment_method.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Pilot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Entities\Reservation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Aircraft_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Boarding_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Booking_agent_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\File_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Flight_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Flight_attendants_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Input_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Maintenance_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Menu_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Passenger_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Payment_method_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Pilot_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Reservation_Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Menus\Admin_Menus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Menus\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Menus\Passenger_Menus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Aircraft_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Boarding_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Booking_agent_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Flight_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Flight_attendants_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Maintenance_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Passenger_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Payment_method_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Pilot_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Reservation_Serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C1850E9A-DA5D-345F-9472-CA35970CE5C7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

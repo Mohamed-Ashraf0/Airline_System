@@ -1,0 +1,10 @@
+^C:\USERS\MOHAM\ONEDRIVE\DESKTOP\SOFTWARE COURSE\AIRLINE_RESERVATION_PROJECT_TEST\BUILD\CMAKEFILES\8B1BAE5C0D965E2E938895D9FBC1DF8C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test" "-BC:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test/build/AirlineReservationProject.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

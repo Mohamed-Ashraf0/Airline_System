@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\build\CMakeFiles\8b1bae5c0d965e2e938895d9fbc1df8c\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{202355EB-44B4-3849-9E6D-FEBCCB87F3C5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
