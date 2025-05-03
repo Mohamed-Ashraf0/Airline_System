@@ -21,7 +21,7 @@ class InputHandler
 {
 public:
     InputHandler();
-    int getInteger(int n);
+    int getInteger(int n=0);
 };
 
 #endif 

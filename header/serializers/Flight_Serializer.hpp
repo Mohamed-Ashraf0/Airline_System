@@ -1,5 +1,5 @@
-#ifndef PASSENGER_SERIALIZER_HPP
-#define PASSENGER_SERIALIZER_HPP
+#ifndef FLIGHT_SERIALIZER_HPP
+#define FLIGHT_SERIALIZER_HPP
 
 #include "nlohmann/json.hpp"
 #include "Entities/Flight.hpp"

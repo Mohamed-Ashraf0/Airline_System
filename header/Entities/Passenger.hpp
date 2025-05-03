@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include "Entities/Entity.hpp"
-#include "serializers/Passenger_Serializer.hpp"
+
 
 class Passenger:public Entity
 {
@@ -14,7 +14,7 @@ private:
     std::string password;
     std::vector<std::string> Reservations_id;
     std::vector<std::string> BoardingPasses_id;
-    std::string PaymentMethod;
+    std::string PaymentMethod_id;
 
 public:
     Passenger() = default;
@@ -27,9 +27,13 @@ public:
     const std::vector<std::string> &getBoardingPasses() const;
     const std::string &getPaymentMethod() const;
     void setId(const std::string &id);
+    void setUsername(const std::string &name);
+    void setPassword(const std::string &password);
+    void setPaymentMethod(const std::string &paymentMethodId);
     void addReservation(const std::string &reservationId);
+    void removeReservation(const std::string &reservationId);
     void addBoardingPass(const std::string &boardingPassId);
-    void setPaymentMethod(const std::string &paymentMethod);
+    void removeBoardingPass(const std::string &boardingPassId);
     void displayInfo() const;
     friend class passengerJsonSerializer; 
 };

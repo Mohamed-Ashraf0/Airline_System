@@ -1,7 +1,7 @@
 #ifndef PASSENGER_SERIALIZER_HPP
 #define PASSENGER_SERIALIZER_HPP
 
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "Entities/Passenger.hpp"
 
 class passengerJsonSerializer

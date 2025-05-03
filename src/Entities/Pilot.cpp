@@ -28,6 +28,11 @@ void Pilot::addFlightId(const std::string &flightId) {
     flightIds.push_back(flightId);
 }
 
+void Pilot::removeFlightId(const std::string &flightId) {
+    flightIds.erase(std::remove(flightIds.begin(), flightIds.end(), flightId), flightIds.end());
+}
+
+
 void Pilot::displayInfo() const {
     std::cout << "Pilot ID: " << id << "\n"
               << "Name: " << name << "\n"

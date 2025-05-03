@@ -1,27 +1,42 @@
 #include "Handlers/Reservation_Handler.hpp"
 
-passengerhandler::passengerhandler()
-    : fileHandler(FileHandler::create("../Airline-Data/Passenger.json")) {}
+reservationHandler::reservationHandler()
+    : fileHandler(FileHandler::create("../../Airline-Data/Reservation.json")) {}
 
-Passenger passengerhandler::login(const std::string &username, const std::string &password)
+void reservationHandler::addReservation( Reservation &reservation) 
 {
-    nlohmann::json j = fileHandler->login(username, password);
-    return passengerJsonSerializer::deserialize(j);
+    nlohmann::json j = reservationJsonSerializer::serialize(reservation);
+    std::string idPrefix = "R";
+    std::string id = fileHandler->writeJsonToFile(j, idPrefix);
+    reservation.setId(id);
 }
 
-void passengerhandler::addPassenger(const Passenger &passenger)
+void reservationHandler::updateReservation(const Reservation &reservation) 
 {
-    nlohmann::json j = passengerJsonSerializer::serialize(passenger);
-    fileHandler->writeJsonToFile(j);
+    nlohmann::json j = reservationJsonSerializer::serialize(reservation);
+    fileHandler->updateJsonFile(j, reservation.getId());
 }
-
-void passengerhandler::updatePassenger(const Passenger &passenger)
+void reservationHandler::removeReservation(const std::string &reservationId) 
 {
-    nlohmann::json j = passengerJsonSerializer::serialize(passenger);
-    fileHandler->updateJsonFile(j, passenger.getId());
+    fileHandler->deleteEntityById(reservationId);
 }
-
-void passengerhandler::deletePassenger(const std::string &passengerId)
+Reservation reservationHandler::getReservation(const std::string &reservationId) 
 {
-    fileHandler->deletePassengerById(passengerId);
+    nlohmann::json j;
+    try
+    {
+        j = fileHandler->readJsonFromFile();
+    }
+    catch (const std::runtime_error &)
+    {
+        throw std::runtime_error("Reservation not found.\n");
+    }    
+    if (j.find(reservationId) == j.end())
+    {
+        throw std::runtime_error("Reservation not found.\n");
+    }
+    j[reservationId]["id"] = reservationId;
+    Reservation reservation = reservationJsonSerializer::deserialize(j[reservationId]);
+    reservation.setId(reservationId);
+    return reservation;
 }

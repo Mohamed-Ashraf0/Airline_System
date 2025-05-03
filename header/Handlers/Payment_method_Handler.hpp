@@ -1,9 +1,11 @@
-#ifndef PASSENGER_HANDLER_HPP
-#define PASSENGER_HANDLER_HPP
+#ifndef PAYMENT_METHOD_HANDLER_HPP
+#define PAYMENT_METHOD_HANDLER_HPP
 
 #include <memory>
 #include <string>
-#include "json.hpp"
+#include <vector>
+#include <iostream>
+#include "nlohmann/json.hpp"
 #include "Entities/Payment_method.hpp"
 #include "Handlers/File_Handler.hpp"
 #include "serializers/Payment_method_Serializer.hpp"
@@ -15,11 +17,11 @@ private:
 
 public:
     paymentmethodhandler();
-
-    Passenger login(const std::string &username, const std::string &password);
-    void addPassenger(const Passenger &passenger);
-    void updatePassenger(const Passenger &passenger);
-    void deletePassenger(const std::string &passengerId);
+    void addPaymentMethod(PaymentMethod &payment_method);
+    void updatePaymentMethod(PaymentMethod &payment_method);
+    void removePaymentMethod(const std::string &payment_methodId);
+    void viewPaymentMethod(const std::string &payment_methodId);
+    PaymentMethod getPaymentMethodById(const std::string &payment_methodId);
 };
 
 #endif

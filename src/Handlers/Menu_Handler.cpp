@@ -14,11 +14,11 @@ std::unique_ptr<Menu> MenuHandler::getMenu() {
         case 1:
             return std::make_unique<AdminMenu>();
         case 2:
-            std::cout << "Booking Agent menu is not implemented yet.\n";
-            return nullptr;
+            return std::make_unique<BookingAgentMenu>();
         case 3:
             return std::make_unique<PassengerMenu>();
         default:
+        return nullptr; 
         break;
     }
 }

@@ -1,0 +1,10 @@
+{
+    "R1": {
+        "flightId": "F1",
+        "passengerId": "P1",
+        "paymentMethodId": "PM1",
+        "seat": "A9",
+        "status": "CheckedIn"
+    },
+    "lastId": 1
+}

@@ -5,7 +5,8 @@ nlohmann::json reservationJsonSerializer::serialize(const Reservation &reservati
     nlohmann::json j({{"flightId", reservation.flightId},
                       {"passengerId", reservation.passengerId},
                       {"status", reservation.status},
-                      {"paymentMethodId", reservation.paymentMethodId}});
+                      {"paymentMethodId", reservation.paymentMethodId},
+                      {"seat", reservation.seat}});
     return j;
 }
 
@@ -17,5 +18,6 @@ Reservation reservationJsonSerializer::deserialize(const nlohmann::json &j)
     j.at("passengerId").get_to(reservation.passengerId);
     j.at("status").get_to(reservation.status);
     j.at("paymentMethodId").get_to(reservation.paymentMethodId);
+    j.at("seat").get_to(reservation.seat);
     return reservation;
 }

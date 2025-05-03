@@ -24,7 +24,9 @@ const std::string &Reservation::getStatus() const {
 const std::string &Reservation::getPaymentMethodId() const {
     return paymentMethodId;
 }
-
+const std::string &Reservation::getSeat() const {
+    return seat;
+}
 // Setters
 void Reservation::setId(const std::string &id) {
     this->id = id;
@@ -46,11 +48,17 @@ void Reservation::setPaymentMethodId(const std::string &paymentMethodId) {
     this->paymentMethodId = paymentMethodId;
 }
 
+
+void Reservation::setSeat(const std::string &seat) {
+    this->seat = seat;
+}
+
 // Display Information
 void Reservation::displayInfo() const {
     std::cout << "Reservation ID: " << id << "\n"
               << "Flight ID: " << flightId << "\n"
               << "Passenger ID: " << passengerId << "\n"
-              << "Status: " << status << "\n"
-              << "Payment Method ID: " << paymentMethodId << "\n";
+              << "Payment Method ID: " << paymentMethodId << "\n"
+              << "Seat: " << seat << "\n"
+              << "Status: " << status << "\n";
 }

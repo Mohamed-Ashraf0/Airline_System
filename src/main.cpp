@@ -7,4 +7,4 @@ int main() {
         std::unique_ptr<Menu> menu = menuHandler.getMenu();
         menu->displayMenu(); 
     }
-}
+} 

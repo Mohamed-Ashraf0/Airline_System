@@ -5,9 +5,10 @@
 #include <string>
 #include "Entities/Entity.hpp"
 
-class Maintenance: public Entity {
+class Maintenance : public Entity
+{
 private:
-    std::string date;  
+    std::string date;
     std::string aircraftId;
     std::string details;
 
@@ -24,8 +25,8 @@ public:
     void setDate(const std::string &date);
     void setAircraftId(const std::string &aircraftId);
     void setDetails(const std::string &details);
-
     void displayInfo() const;
+    friend class maintenanceJsonSerializer;
 };
 
 #endif

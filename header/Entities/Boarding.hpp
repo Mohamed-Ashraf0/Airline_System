@@ -24,6 +24,7 @@ public:
     void setId(const std::string &id) override;
     void setReservationId(const std::string &reservationId);
     void displayInfo() const;
+    friend class boardingJsonSerializer;
 };
 
 #endif 

@@ -1,0 +1,15 @@
+{
+    "FA1": {
+        "flightIds": [
+            "F1"
+        ],
+        "name": "hala"
+    },
+    "FA2": {
+        "flightIds": [
+            "F1"
+        ],
+        "name": "sally"
+    },
+    "lastId": 2
+}

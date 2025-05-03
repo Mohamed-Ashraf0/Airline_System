@@ -1,4 +1,4 @@
-#include "Entities/Flight_attendant.hpp"
+#include "Entities/Flight_attendants.hpp"
 #include <iostream>
 
 FlightAttendant::FlightAttendant(const std::string &name)
@@ -36,4 +36,10 @@ void FlightAttendant::displayInfo() const {
         std::cout << flightId << " ";
     }
     std::cout << "\n";
+}
+void FlightAttendant::removeFlightId(const std::string &flightId) {
+    auto it = std::remove(flightIds.begin(), flightIds.end(), flightId);
+    if (it != flightIds.end()) {
+        flightIds.erase(it, flightIds.end());
+    }
 }

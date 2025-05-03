@@ -1,7 +1,7 @@
-#ifndef PASSENGER_SERIALIZER_HPP
-#define PASSENGER_SERIALIZER_HPP
+#ifndef RESERVATION_SERIALIZER_HPP
+#define RESERVATION_SERIALIZER_HPP
 
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "Entities/Reservation.hpp"
 
 class reservationJsonSerializer

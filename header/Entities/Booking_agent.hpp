@@ -23,8 +23,8 @@ public:
     void setId(const std::string &id);
     void setUsername(const std::string &username);
     void setPassword(const std::string &password);
-
     void displayInfo() const;
+    friend class bookingagentJsonSerializer; 
 };
 
 #endif

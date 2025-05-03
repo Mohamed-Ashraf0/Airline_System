@@ -22,6 +22,11 @@ nlohmann::json FileHandler::readJsonFromFile()
     {
         throw std::runtime_error("Failed to open the file for reading: " + filePath);
     }
+    if (inputFile.peek() == std::ifstream::traits_type::eof())
+    {
+        inputFile.close();
+        throw std::runtime_error("File is empty: " + filePath);
+    }
     nlohmann::json jsonData;
     inputFile >> jsonData;
     inputFile.close();
@@ -97,6 +102,16 @@ void FileHandler::deleteEntityById(const std::string &entityId)
         throw std::runtime_error("Entity ID not found: " + entityId);
     }
     existingJson.erase(entityId);
+    if (existingJson.size() == 1 && existingJson.contains("lastId"))
+    {
+        std::ofstream outputFile(filePath, std::ios::trunc);
+        if (!outputFile)
+        {
+            throw std::runtime_error("Failed to open the file for writing: " + filePath);
+        }
+        outputFile.close();
+        return;
+    }
     std::ofstream outputFile(filePath, std::ios::trunc);
     if (!outputFile)
     {
@@ -117,7 +132,7 @@ nlohmann::json FileHandler::login(const std::string &username, const std::string
         {
             if (userJson["password"] == password)
             {
-                return passengerJson;
+                return userJson;
             }
             else
             {

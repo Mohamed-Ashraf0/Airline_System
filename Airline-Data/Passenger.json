@@ -1,15 +1,14 @@
 {
     "P1": {
         "BoardingPasses_id": [
-            "B8",
-            "B9"
+            "B1"
         ],
-        "PaymentMethod": "Credit Card",
+        "PaymentMethod": "PM1",
         "Reservations_id": [
-            "R5"
+            "R1"
         ],
-        "password": "aa123123",
-        "username": "ahmed fathy"
+        "password": "$2a$12$abcdefghijklmnopqrstuuZJF8jFl0c447R.bYBg6v4xh.KCz5kjW",
+        "username": "mohamed"
     },
     "lastId": 1
 }

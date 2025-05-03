@@ -1,7 +1,7 @@
-#ifndef PASSENGER_SERIALIZER_HPP
-#define PASSENGER_SERIALIZER_HPP
+#ifndef PAYMENT_METHOD_SERIALIZER_HPP
+#define PAYMENT_METHOD_SERIALIZER_HPP
 
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "Entities/Payment_method.hpp"
 
 class paymentmethodJsonSerializer

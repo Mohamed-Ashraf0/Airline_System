@@ -1,0 +1,11 @@
+{
+    "PM1": {
+        "deposit": [],
+        "details": "1234-1234-1234-1234",
+        "method": "Credit",
+        "withdrawl": [
+            "Cost for flight with ID F1: $350.000000"
+        ]
+    },
+    "lastId": 1
+}

@@ -1,7 +1,7 @@
-#ifndef PASSENGER_SERIALIZER_HPP
-#define PASSENGER_SERIALIZER_HPP
+#ifndef BOOKING_AGENT_SERIALIZER_HPP
+#define BOOKING_AGENT_SERIALIZER_HPP
 
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "Entities/Booking_agent.hpp"
 
 class bookingagentJsonSerializer

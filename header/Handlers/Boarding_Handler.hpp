@@ -3,23 +3,23 @@
 
 #include <memory>
 #include <string>
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "Entities/Boarding.hpp"
 #include "Handlers/File_Handler.hpp"
 #include "serializers/Boarding_Serializer.hpp"
+#include "Handlers/Input_Handler.hpp"
 
 class boardinghandler
 {
 private:
     std::unique_ptr<FileHandler> fileHandler;
-
+    InputHandler inputHandler;
 public:
-    passengerhandler();
-
-    Passenger login(const std::string &username, const std::string &password);
-    void addPassenger(const Passenger &passenger);
-    void updatePassenger(const Passenger &passenger);
-    void deletePassenger(const std::string &passengerId);
+    boardinghandler();
+    void addBoarding(Boarding &boarding);
+    void updateBoarding(const Boarding &boarding);
+    void removeBoarding(const std::string &boardingId);
+    Boarding getBoardingById(const std::string &boardingId);
 };
 
 #endif

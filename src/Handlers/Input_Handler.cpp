@@ -22,18 +22,21 @@ int InputHandler::getInteger(int n)
     {
         try
         {
-            std::cout << "Enter choice: ";
+            if (n != 0)
+            {
+                std::cout << "Enter choice: ";
+            }
             std::cin >> x;
 
             // Validate the input range
-            if (x < 1 || x > n)
+            if (n != 0 && (x < 1 || x > n))
             {
                 throw InputException("Invalid input! Please choose a menu option between 1 and " + std::to_string(n) + ".");
             }
 
-            break; 
+            break;
         }
-        catch (const std::ios_base::failure &e)
+        catch (const std::ios_base::failure &)
         {
             std::cerr << "Invalid input! Please enter a valid integer.\n";
             std::cin.clear();

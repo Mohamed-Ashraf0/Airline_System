@@ -19,12 +19,12 @@ public:
     const std::string &getId() const;
     const std::string &getName() const;
     const std::vector<std::string> &getFlightIds() const;
-
+    void removeFlightId(const std::string &flightId);
     void setId(const std::string &id);
     void setName(const std::string &name);
     void addFlightId(const std::string &flightId);
-
     void displayInfo() const;
+    friend class flightagentJsonSerializer;
 };
 
 #endif

@@ -16,7 +16,18 @@ const std::string &Aircraft::getType() const
 {
     return Type;
 }
-
+const std::vector<std::string> &Aircraft::getMaintenance() const
+{
+    return Maintenance_id;
+}
+void Aircraft::removeMaintenance(const std::string &maintenanceId)
+{
+    auto it = std::remove(Maintenance_id.begin(), Maintenance_id.end(), maintenanceId);
+    if (it != Maintenance_id.end())
+    {
+        Maintenance_id.erase(it, Maintenance_id.end());
+    }
+}
 void Aircraft::setId(const std::string &id)
 {
     this->id = id;

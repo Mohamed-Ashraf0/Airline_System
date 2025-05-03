@@ -24,8 +24,9 @@ public:
     void setId(const std::string &id);
     void setName(const std::string &name);
     void addFlightId(const std::string &flightId);
-
+    void removeFlightId(const std::string &flightId);
     void displayInfo() const;
+    friend class pilotJsonSerializer;
 };
 
 #endif 

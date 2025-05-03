@@ -1,5 +1,4 @@
 #include "Entities/Maintenance.hpp"
-#include <iostream>
 
 // Constructor
 Maintenance::Maintenance (const std::string &date, const std::string &aircraftId, const std::string &details)

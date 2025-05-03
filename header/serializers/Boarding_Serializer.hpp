@@ -1,7 +1,7 @@
-#ifndef PASSENGER_SERIALIZER_HPP
-#define PASSENGER_SERIALIZER_HPP
+#ifndef BOARDING_SERIALIZER_HPP
+#define BOARDING_SERIALIZER_HPP
 
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "Entities/Boarding.hpp"
 
 class boardingJsonSerializer

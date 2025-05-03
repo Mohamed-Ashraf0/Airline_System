@@ -1,25 +1,26 @@
-#ifndef PASSENGER_HANDLER_HPP
-#define PASSENGER_HANDLER_HPP
+#ifndef RESERVATION_HANDLER_HPP
+#define RESERVATION_HANDLER_HPP
 
 #include <memory>
 #include <string>
-#include "json.hpp"
-#include "Entities/Passenger.hpp"
+#include "nlohmann/json.hpp"
+#include "Entities/Reservation.hpp"
 #include "Handlers/File_Handler.hpp"
-#include "serializers/Passenger_Serializer.hpp"
+#include "serializers/Reservation_Serializer.hpp"
+#include "Input_Handler.hpp"
 
-class passengerhandler
+class reservationHandler
 {
 private:
     std::unique_ptr<FileHandler> fileHandler;
-
+    InputHandler inputHandler;
 public:
-    passengerhandler();
 
-    Passenger login(const std::string &username, const std::string &password);
-    void addPassenger(const Passenger &passenger);
-    void updatePassenger(const Passenger &passenger);
-    void deletePassenger(const std::string &passengerId);
+    reservationHandler();
+    void addReservation( Reservation &reservation);
+    void updateReservation(const Reservation &reservation);
+    void removeReservation(const std::string &reservationId);
+    Reservation getReservation(const std::string &reservationId);
 };
 
 #endif

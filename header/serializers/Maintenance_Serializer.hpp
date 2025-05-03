@@ -1,7 +1,7 @@
-#ifndef PASSENGER_SERIALIZER_HPP
-#define PASSENGER_SERIALIZER_HPP
+#ifndef MAINTENANCE_SERIALIZER_HPP
+#define MAINTENANCE_SERIALIZER_HPP
 
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 #include "Entities/Maintenance.hpp"
 
 class maintenanceJsonSerializer

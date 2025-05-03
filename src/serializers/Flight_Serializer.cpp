@@ -8,7 +8,10 @@ nlohmann::json flightJsonSerializer::serialize(const Flight &flight)
                       {"Arrival_Date_and_Time", flight.Arrival_Date_and_Time},
                       {"Aircraft_id", flight.Aircraft_id},
                       {"BoardingGate", flight.BoardingGate},
+                      {"BoardingTime", flight.BoardingTime},
                       {"Passengers_id", flight.Passengers_id},
+                      {"Pilots_id", flight.Pilots_id},
+                      {"FlightAttendants_id", flight.FlightAttendants_id},
                       {"status", flight.status},
                       {"cost", flight.cost},
                       {"seats", flight.seats},
@@ -27,7 +30,10 @@ Flight flightJsonSerializer::deserialize(const nlohmann::json &j)
     j.at("Arrival_Date_and_Time").get_to(flight.Arrival_Date_and_Time);
     j.at("Aircraft_id").get_to(flight.Aircraft_id);
     j.at("BoardingGate").get_to(flight.BoardingGate);
+    j.at("BoardingTime").get_to(flight.BoardingTime);
     j.at("Passengers_id").get_to(flight.Passengers_id);
+    j.at("Pilots_id").get_to(flight.Pilots_id);
+    j.at("FlightAttendants_id").get_to(flight.FlightAttendants_id);
     j.at("status").get_to(flight.status);
     j.at("cost").get_to(flight.cost);
     j.at("seats").get_to(flight.seats);

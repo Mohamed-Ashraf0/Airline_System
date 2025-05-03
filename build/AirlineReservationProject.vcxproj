@@ -65,31 +65,36 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test</LocalDebuggerWorkingDirectory>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\build\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AirlineReservationProject.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AirlineReservationProject</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test</LocalDebuggerWorkingDirectory>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\build\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">AirlineReservationProject.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">AirlineReservationProject</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test</LocalDebuggerWorkingDirectory>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\build\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">AirlineReservationProject.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">AirlineReservationProject</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/Moham/OneDrive/Desktop/software course/Airline_Reservation_project_test</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4267;4244</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -101,16 +106,16 @@
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -133,9 +138,10 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4996;4267;4244</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -147,18 +153,18 @@
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -181,9 +187,10 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4996;4267;4244</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -195,18 +202,18 @@
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -229,10 +236,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4267;4244</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -244,16 +252,16 @@
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\header\external;C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -357,6 +365,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Pilot_Handler.cpp" />
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Handlers\Reservation_Handler.cpp" />
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Menus\Admin_Menus.cpp" />
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Menus\Booking_agent_Menus.cpp" />
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Menus\Menu.cpp" />
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\Menus\Passenger_Menus.cpp" />
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\main.cpp" />
@@ -370,6 +379,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Payment_method_Serializer.cpp" />
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Pilot_Serializer.cpp" />
     <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\src\serializers\Reservation_Serializer.cpp" />
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt\bcrypt.c" />
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt\crypt_blowfish\crypt_blowfish.c" />
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt\crypt_blowfish\crypt_gensalt.c" />
+    <ClCompile Include="C:\Users\Moham\OneDrive\Desktop\software course\Airline_Reservation_project_test\libs\bcrypt\crypt_blowfish\wrapper.c" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
