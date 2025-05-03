@@ -9,6 +9,9 @@
 #include "serializers/Reservation_Serializer.hpp"
 #include "Input_Handler.hpp"
 
+#define REMOVE_ADD_OPTION false
+#define REMOVE_CANCLED_OPTION true
+
 class reservationHandler
 {
 private:
@@ -21,6 +24,7 @@ public:
     void updateReservation(const Reservation &reservation);
     void removeReservation(const std::string &reservationId);
     Reservation getReservation(const std::string &reservationId);
+    Reservation chooseReservation(bool allowAddOption = true, bool allowCancelOption = false);
 };
 
 #endif

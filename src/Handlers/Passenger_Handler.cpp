@@ -201,3 +201,22 @@ void passengerhandler::viewAllPassengers()
         index++;
     }
 }
+Passenger passengerhandler::getPassengerById(const std::string &passengerId)
+{
+    nlohmann::json j;
+    try
+    {
+        j = fileHandler->readJsonFromFile();
+    }
+    catch (const std::runtime_error &)
+    {
+        throw std::runtime_error("No passengers available.\n");
+    }
+    if (j.find(passengerId) == j.end())
+    {
+        throw std::runtime_error("Passenger not found.\n");
+    }
+    j[passengerId]["id"] = passengerId;
+    Passenger selectedPassenger = passengerJsonSerializer::deserialize(j[passengerId]);
+    return selectedPassenger;
+}

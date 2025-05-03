@@ -49,7 +49,7 @@ Aircraft aircrafthandler::chooseaircraft(bool allowAddOption)
 
     if (allowAddOption)
     {
-        std::cout << index << ". Add new Flight\n";
+        std::cout << index << ". Add new Aircraft\n";
     }
 
     int choice = inputHandler.getInteger(allowAddOption ? index : index - 1);

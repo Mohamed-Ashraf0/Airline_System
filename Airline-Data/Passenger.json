@@ -1,14 +1,23 @@
 {
     "P1": {
-        "BoardingPasses_id": [
-            "B1"
-        ],
+        "BoardingPasses_id": [],
         "PaymentMethod": "PM1",
         "Reservations_id": [
-            "R1"
+            "R1",
+            "R3",
+            "R4"
         ],
-        "password": "$2a$12$abcdefghijklmnopqrstuuZJF8jFl0c447R.bYBg6v4xh.KCz5kjW",
-        "username": "mohamed"
+        "password": "$2a$12$abcdefghijklmnopqrstuuhJSekhcEsn32wgdyWIeQd6gV03L65y.",
+        "username": "john"
     },
-    "lastId": 1
+    "P2": {
+        "BoardingPasses_id": [],
+        "PaymentMethod": "PM2",
+        "Reservations_id": [
+            "R2"
+        ],
+        "password": "$2a$12$abcdefghijklmnopqrstuuz2fD7uKrdUferdyHb4JLK9i0fx7LGG6",
+        "username": "mike"
+    },
+    "lastId": 2
 }

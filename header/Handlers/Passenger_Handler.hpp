@@ -28,6 +28,7 @@ public:
     void updatePassenger( Passenger &passenger);
     void deletePassenger(const std::string &passengerId);
     void viewAllPassengers();
+    Passenger getPassengerById(const std::string &passengerId);
 };
 
 #endif

@@ -1,15 +1,8 @@
 {
     "A1": {
-        "Maintenance_id": [
-            "MNT1"
-        ],
-        "Type": "Boeing 737",
-        "seatCount": 150
-    },
-    "A2": {
         "Maintenance_id": [],
-        "Type": "Boeing 735",
-        "seatCount": 180
+        "Type": "Boeing 737",
+        "seatCount": 130
     },
-    "lastId": 2
+    "lastId": 1
 }

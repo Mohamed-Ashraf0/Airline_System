@@ -1,8 +1,0 @@
-{
-    "B1": {
-        "flightId": "F1",
-        "passengerId": "P1",
-        "reservationId": "R1"
-    },
-    "lastId": 1
-}

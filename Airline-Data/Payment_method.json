@@ -1,11 +1,28 @@
 {
     "PM1": {
-        "deposit": [],
+        "deposit": [
+            "Refund for flight with ID F1: $350.000000",
+            "Refund for flight with ID F1: $350.000000",
+            "Refund for flight with ID F1: $350.000000",
+            "Refund for flight with ID F1: $350.000000"
+        ],
         "details": "1234-1234-1234-1234",
-        "method": "Credit",
+        "method": "Credit Card",
+        "withdrawl": [
+            "Cost for flight with ID F1: $350.000000",
+            "Cost for flight with ID F1: $350.000000",
+            "Cost for flight with ID F1: $350.000000"
+        ]
+    },
+    "PM2": {
+        "deposit": [
+            "Refund for flight with ID F1: $350.000000"
+        ],
+        "details": "4321-4321-4321-4321",
+        "method": "Credit Card",
         "withdrawl": [
             "Cost for flight with ID F1: $350.000000"
         ]
     },
-    "lastId": 1
+    "lastId": 2
 }

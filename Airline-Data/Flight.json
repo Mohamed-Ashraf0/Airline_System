@@ -12,33 +12,16 @@
         ],
         "Origin": "New York (JFK)",
         "Passengers_id": [
+            "P2",
             "P1"
         ],
         "Pilots_id": [
             "PL1"
         ],
-        "availableSeats": 149,
+        "availableSeats": 129,
         "cost": 350.0,
-        "seatCount": 150,
+        "seatCount": 130,
         "seats": [
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
-            79,
             79,
             79,
             79,
@@ -169,8 +152,8 @@
             79,
             79,
             79,
-            79,
-            79
+            42,
+            42
         ],
         "status": "Scheduled"
     },

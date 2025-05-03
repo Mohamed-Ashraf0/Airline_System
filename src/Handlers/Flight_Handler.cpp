@@ -47,6 +47,7 @@ Flight flighthandler::chooseFlight(bool allowAddOption,const std::string &passen
                   << "   Total Seats: " << flightJson["seatCount"]<< "\n"
                   << "   Available Seats: " << flightJson["availableSeats"] << "\n"
                   << "   Status: " << flightJson["status"]<< "\n"
+                  << "   Passengers: "<< flightJson["Passengers_id"]<< "\n"
                   << "   Cost: " << flightJson["cost"] << "\n";
         std::cout << "   pilot ID: ";
         for (const auto &pilotId : flightJson["Pilots_id"])
@@ -110,6 +111,8 @@ void flighthandler::viewAllFlights()
                   << "   Arrival Date and Time: " << flightJson["Arrival_Date_and_Time"]<< "\n"
                   << "   Total Seats: " << flightJson["seatCount"]<< "\n"
                   << "   Available Seats: " << flightJson["availableSeats"]<< "\n"
+                  << "   Status: " << flightJson["status"]<< "\n"
+                  << "   Passengers: "<< flightJson["Passengers_id"]<< "\n"
                   << "   Cost: " << flightJson["cost"] << "\n";
         std::cout << "   pilot ID: ";
         for (const auto &pilotId : flightJson["Pilots_id"])

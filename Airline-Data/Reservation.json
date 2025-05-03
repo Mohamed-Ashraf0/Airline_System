@@ -3,8 +3,29 @@
         "flightId": "F1",
         "passengerId": "P1",
         "paymentMethodId": "PM1",
-        "seat": "A9",
-        "status": "CheckedIn"
+        "seat": "D1",
+        "status": "Cancelled"
     },
-    "lastId": 1
+    "R2": {
+        "flightId": "F1",
+        "passengerId": "P2",
+        "paymentMethodId": "PM2",
+        "seat": "B1",
+        "status": "Booked"
+    },
+    "R3": {
+        "flightId": "F1",
+        "passengerId": "P1",
+        "paymentMethodId": "PM1",
+        "seat": "A5",
+        "status": "Cancelled"
+    },
+    "R4": {
+        "flightId": "F1",
+        "passengerId": "P1",
+        "paymentMethodId": "PM1",
+        "seat": "A6",
+        "status": "Booked"
+    },
+    "lastId": 4
 }
