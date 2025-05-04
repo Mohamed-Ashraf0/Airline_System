@@ -2,7 +2,6 @@
 
 flighthandler::flighthandler()
     : fileHandler(FileHandler::create("../../Airline-Data/Flight.json")) {}
-
 void flighthandler::addFlight(Flight &flight)
 {
     nlohmann::json j = flightJsonSerializer::serialize(flight);
@@ -152,4 +151,94 @@ Flight flighthandler::getFlightById(const std::string &flightId)
     j[flightId]["id"] = flightId;
     Flight flight = flightJsonSerializer::deserialize(j[flightId]);
     return flight;
+}
+std::map<std::string, int> flighthandler::getFlightStatusSummary()
+{
+    nlohmann::json j;
+    try
+    {
+        j = fileHandler->readJsonFromFile();
+    }
+    catch (const std::runtime_error &)
+    {
+        throw std::runtime_error("No flights available.\n");
+    }
+
+    std::map<std::string, int> statusSummary = {
+        {"Scheduled", 0},
+        {"Completed", 0},
+        {"Canceled", 0}
+    };
+
+    for (auto &[id, flightJson] : j.items())
+    {
+        if (id == "lastId")
+            continue;
+
+        std::string status = flightJson["status"];
+        if (statusSummary.find(status) != statusSummary.end())
+        {
+            statusSummary[status]++;
+        }
+    }
+
+    return statusSummary;
+}
+std::pair<int, double> flighthandler::getTotalReservationsAndRevenue()
+{
+    nlohmann::json j;
+    try
+    {
+        j = fileHandler->readJsonFromFile();
+    }
+    catch (const std::runtime_error &)
+    {
+        throw std::runtime_error("No flights available.\n");
+    }
+
+    int totalReservations = 0;
+    double totalRevenue = 0.0;
+
+    for (auto &[id, flightJson] : j.items())
+    {
+        if (id == "lastId")
+            continue;
+
+        int passengersCount = flightJson["Passengers_id"].size();
+        double cost = flightJson["cost"];
+
+        totalReservations += passengersCount;
+        totalRevenue += passengersCount * cost;
+    }
+
+    return {totalReservations, totalRevenue};
+}
+std::vector<std::tuple<std::string, std::string, int, double>> flighthandler::getFlightPerformanceDetails()
+{
+    nlohmann::json j;
+    try
+    {
+        j = fileHandler->readJsonFromFile();
+    }
+    catch (const std::runtime_error &)
+    {
+        throw std::runtime_error("No flights available.\n");
+    }
+
+    std::vector<std::tuple<std::string, std::string, int, double>> flightDetails;
+
+    for (auto &[id, flightJson] : j.items())
+    {
+        if (id == "lastId")
+            continue;
+
+        std::string flightId = id;
+        std::string status = flightJson["status"];
+        int passengersCount = flightJson["Passengers_id"].size();
+        double revenue = passengersCount * flightJson["cost"];
+
+        flightDetails.emplace_back(flightId, status, passengersCount, revenue);
+    }
+
+    return flightDetails;
 }

@@ -7,6 +7,11 @@
 #include <filesystem>
 #include <memory>
 #include "bcrypt.h"
+#include <map> 
+#include <vector> 
+#include <tuple> 
+#include <string>
+#include <utility>
 class FileHandler
 {
 private:
@@ -23,6 +28,7 @@ public:
     void deleteEntityById(const std::string &entityId);
     nlohmann::json login(const std::string &username, const std::string &password);
     nlohmann::json search_aircraft(const std::string &aircraftType, int totalSeats);
+
 };
 
 #endif

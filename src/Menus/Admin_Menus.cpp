@@ -43,6 +43,7 @@ void AdminMenu::displayMenu()
             displayupdateAircraft();
             break;
         case AdminMenuState::GENERATE_REPORTS:
+            displayGenerateReports();
             break;
         case AdminMenuState::LOGOUT:
             displayLogout();
@@ -177,7 +178,6 @@ void AdminMenu::displayManageAircrafts()
         // not needed as input is validated in getInteger
         break;
     }
-    
 }
 void AdminMenu::displayManageUsers()
 {
@@ -428,6 +428,36 @@ void AdminMenu::displayupdateAircraft()
         break;
     }
 }
+void AdminMenu::displayGenerateReports()
+{
+    std::cout << "--- Generate Reports ---\n";
+    std::cout << "1. Operational Reports\n";
+    std::cout << "2. Maintenance Reports\n";
+    std::cout << "3. User Activity Reports\n";
+    std::cout << "4. Back to Main Menu\n";
+    int choice;
+    choice = inputHandler.getInteger(4);
+    switch (choice)
+    {
+    case 1:
+        operationalreport();
+        state = AdminMenuState::ADMINSTRATOR_MENU;
+        break;
+    case 2:
+        maintenancereport();
+        state = AdminMenuState::ADMINSTRATOR_MENU;
+        break;
+    case 3:
+        useractivityreport();
+        state = AdminMenuState::ADMINSTRATOR_MENU;
+        break;
+    case 4:
+        state = AdminMenuState::ADMINSTRATOR_MENU;
+        break;
+    default:
+        break;
+    }
+}
 Flight AdminMenu::addFlight()
 {
     std::string origin, destination, departureDateTime, BoardingGate, arrivalDateTime, BoardingTime, aircraftType, status;
@@ -506,6 +536,8 @@ void AdminMenu::updateFlight(Flight &flight)
     getline(std::cin, departureDateTime);
     std::cout << "Enter New Arrival Date and Time (YYYY-MM-DD HH:MM): ";
     getline(std::cin, arrivalDateTime);
+    std::cout << "Enter Status (Scheduled/Delayed/Canceled): ";
+    getline(std::cin, status);
     std::cout << "Enter New Cost: ";
     cost = inputHandler.getInteger();
     flight.setOrigin(origin);
@@ -1053,4 +1085,90 @@ void AdminMenu::updateMaintenance(Aircraft &aircraft)
     }
 
     std::cout << "Maintenance " << maintenance.getId() << " has been successfully updated.\n";
+}
+void AdminMenu::operationalreport()
+{
+    std::cout << "--- Operational Reports ---\n";
+    try
+    {
+        auto statusSummary = flight_handler.getFlightStatusSummary();
+        auto [totalReservations, totalRevenue] = flight_handler.getTotalReservationsAndRevenue();
+        auto flightDetails = flight_handler.getFlightPerformanceDetails();
+        std::cout << "Generate operational reports.\n";
+        std::cout << "Report Summary:\n";
+        std::cout << "- Total Flights: " << statusSummary["Scheduled"] + statusSummary["Completed"] + statusSummary["Canceled"] << "\n";
+        std::cout << "- Flights Scheduled: " << statusSummary["Scheduled"] << "\n";
+        std::cout << "- Flights Completed: " << statusSummary["Completed"] << "\n";
+        std::cout << "- Flights Canceled: " << statusSummary["Canceled"] << "\n";
+        std::cout << "- Total Reservations Made: " << totalReservations << "\n";
+        std::cout << "- Total Revenue: " << totalRevenue << "\n";
+        std::cout << "Detailed Flight Performance: \n";
+        int index = 1;
+        for (const auto &[flightId, status, bookings, revenue] : flightDetails)
+        {
+            std::cout << index++ << ". Flight " << flightId << ": " << status
+                      << " (" << bookings << " Bookings, $" << revenue << ")\n";
+        }
+    }
+
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+        return;
+    }
+}
+
+void AdminMenu::maintenancereport()
+{
+    std::cout << "--- Maintenance Reports ---\n";
+    try
+    {
+        auto [totalMaintenance, maintenanceDetails] = maintenance_handler.getAllMaintenances();
+        std::cout << "Generate Maintenance reports.\n";
+        std::cout << "Report Summary:\n";
+        std::cout << "- Total Maintenance Records: " << totalMaintenance << "\n";
+        std::cout << "Detailed Maintenance Records:\n";
+        int index = 1;
+        for (const auto &[id, date, aircraftId, details] : maintenanceDetails)
+        {
+            std::cout << index++ << ". Maintenance ID: " << id << "\n";
+            std::cout << "   Date: " << date << "\n";
+            std::cout << "   Aircraft ID: " << aircraftId << "\n";
+            std::cout << "   Details: " << details << "\n";
+        }
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+        return;
+    }
+}
+void AdminMenu::useractivityreport()
+{
+    std::cout << "--- User Activity Report ---\n";
+    try
+    {
+        auto [totalPassengers, passengerDetails] = passenger_handler.getAllPassengers();
+        std::cout << "Generate User Activity reports.\n";
+        std::cout << "Report Summary:\n";
+        std::cout << "Total Passengers: " << totalPassengers << "\n";
+        std::cout << "Detailed Passenger Records:\n";
+        int index = 1;
+        for (const auto &[id, username, reservations] : passengerDetails)
+        {
+            std::cout << index++ << ". Passenger ID: " << id << "\n";
+            std::cout << "   Username: " << username << "\n";
+            std::cout << "   Reservations: ";
+            for (const auto &reservation : reservations)
+            {
+                std::cout << reservation << " ";
+            }
+            std::cout << "\n";
+        }
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+        return;
+    }
 }

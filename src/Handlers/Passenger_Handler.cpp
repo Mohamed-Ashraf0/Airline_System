@@ -220,3 +220,33 @@ Passenger passengerhandler::getPassengerById(const std::string &passengerId)
     Passenger selectedPassenger = passengerJsonSerializer::deserialize(j[passengerId]);
     return selectedPassenger;
 }
+std::pair<int, std::vector<std::tuple<std::string, std::string, std::vector<std::string>>>> passengerhandler::getAllPassengers()
+{
+    nlohmann::json j;
+    try
+    {
+        j = fileHandler->readJsonFromFile();
+    }
+    catch (const std::runtime_error &)
+    {
+        throw std::runtime_error("No passengers available.\n");
+    }
+
+    int totalPassengers = 0;
+    std::vector<std::tuple<std::string, std::string, std::vector<std::string>>> passengerDetails;
+
+    for (auto &[id, passengerJson] : j.items())
+    {
+        if (id == "lastId")
+            continue;
+
+        std::string passengerId = id;
+        std::string username = passengerJson["username"];
+        std::vector<std::string> reservations = passengerJson["Reservations_id"].get<std::vector<std::string>>();
+
+        passengerDetails.emplace_back(passengerId, username, reservations);
+        totalPassengers++;
+    }
+
+    return {totalPassengers, passengerDetails};
+}

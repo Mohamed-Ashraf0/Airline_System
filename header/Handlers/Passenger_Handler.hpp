@@ -29,6 +29,7 @@ public:
     void deletePassenger(const std::string &passengerId);
     void viewAllPassengers();
     Passenger getPassengerById(const std::string &passengerId);
+    std::pair<int, std::vector<std::tuple<std::string, std::string, std::vector<std::string>>>>getAllPassengers();
 };
 
 #endif

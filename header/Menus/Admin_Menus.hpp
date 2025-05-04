@@ -62,6 +62,7 @@ private:
     void displayManageFlightAttendants();
     void displayupdateFlight();
     void displayupdateAircraft();
+    void displayGenerateReports();
 
     Flight addFlight();
     void updateFlight(Flight& flight);
@@ -96,6 +97,9 @@ private:
     void updateFlightAttendant();
     void removeFlightAttendant();
     void viewAllFlightAttendants();
+    void operationalreport();
+    void maintenancereport();
+    void useractivityreport();
 public:
     AdminMenu();
     void displayMenu();

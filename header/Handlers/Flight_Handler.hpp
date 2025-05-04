@@ -25,6 +25,9 @@ public:
     void removeFlight(const Flight &flight);
     void viewAllFlights();
     Flight getFlightById(const std::string &flightId);
+    std::map<std::string, int> getFlightStatusSummary();
+    std::pair<int, double> getTotalReservationsAndRevenue();
+    std::vector<std::tuple<std::string, std::string, int, double>> getFlightPerformanceDetails();
 
 };
 

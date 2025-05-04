@@ -109,3 +109,34 @@ void maintenancehandler::viewmyMaintenances(const std::vector<std::string> &main
         throw std::runtime_error("No maintenance records available.\n");
     }
 }
+std::pair<int, std::vector<std::tuple<std::string, std::string, std::string, std::string>>> maintenancehandler::getAllMaintenances()
+{
+    nlohmann::json j;
+    try
+    {
+        j = fileHandler->readJsonFromFile();
+    }
+    catch (const std::runtime_error &)
+    {
+        throw std::runtime_error("No maintenance records available.\n");
+    }
+
+    int totalMaintenance = 0;
+    std::vector<std::tuple<std::string, std::string, std::string, std::string>> maintenanceDetails;
+
+    for (auto &[id, maintenanceJson] : j.items())
+    {
+        if (id == "lastId")
+            continue;
+
+        std::string maintenanceId = id;
+        std::string date = maintenanceJson["date"];
+        std::string aircraftId = maintenanceJson["aircraftId"];
+        std::string details = maintenanceJson["details"];
+
+        maintenanceDetails.emplace_back(maintenanceId, date, aircraftId, details);
+        totalMaintenance++;
+    }
+
+    return {totalMaintenance, maintenanceDetails};
+}
